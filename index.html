@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +28,9 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  flex-wrap:wrap;
 }
 
-.topbar h3{
-  margin:0;
-  font-size:16px;
-}
+.topbar h3{margin:0;font-size:16px;}
 
 .topbar a{
   background:#ff9800;
@@ -55,17 +50,8 @@ body{
   text-align:center;
 }
 
-.hero h1{
-  font-size:28px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  font-size:16px;
-  opacity:.95;
-}
-
-/* BUTTON */
+.hero h1{font-size:28px;margin-bottom:10px;}
+.hero p{font-size:16px;opacity:.95;}
 
 .btn{
   display:inline-block;
@@ -99,7 +85,7 @@ h2{
   margin-bottom:24px;
 }
 
-/* GRID — MOBILE FIRST */
+/* GRID */
 
 .grid{
   display:grid;
@@ -118,9 +104,7 @@ h2{
   transition:.3s;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-}
+.card:hover{transform:translateY(-4px);}
 
 .card h3{
   margin-top:0;
@@ -142,6 +126,18 @@ ul{
   border-radius:16px;
   font-size:15px;
   line-height:1.8;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+  background:linear-gradient(120deg,#fff,#f3f7ff);
+  border-left:6px solid #7c4dff;
+}
+
+.testimonial p{
+  font-style:italic;
+  margin-bottom:10px;
 }
 
 /* CTA */
@@ -182,7 +178,6 @@ footer a{
   .hero h1{font-size:42px}
   .grid{grid-template-columns:repeat(3,1fr)}
   h2{font-size:28px}
-  ul{font-size:15px}
 }
 
 </style>
@@ -190,14 +185,10 @@ footer a{
 
 <body>
 
-<!-- TOP BAR -->
-
 <div class="topbar">
 <h3>MIS Executive Course</h3>
 <a href="mailto:narayana@knrtech.in?subject=MIS Course Enquiry">Contact</a>
 </div>
-
-<!-- HERO -->
 
 <div class="hero">
 <h1>MIS Executive Master Course</h1>
@@ -210,61 +201,40 @@ Book Demo Class
 </a>
 </div>
 
-<!-- ABOUT -->
-
 <section>
 <h2>About Course</h2>
 <div class="highlight">
 Practical MIS training focused on dashboards, automation, reporting, and analytics using real business datasets.
 <br><br>
-✔ Practical Training  
 ✔ Live Projects  
 ✔ Resume Support  
-✔ Interview Preparation
+✔ Interview Preparation  
+✔ Placement Direction
 </div>
 </section>
-
-<!-- MODULES -->
 
 <section class="section-alt">
 <h2>Course Modules</h2>
 <div class="grid">
-
-<div class="card"><h3>Advanced Excel</h3>
-<ul><li>Formulas</li><li>Pivots</li><li>Dashboards</li><li>Power Query</li></ul></div>
-
-<div class="card"><h3>Google Sheets</h3>
-<ul><li>QUERY</li><li>IMPORTRANGE</li><li>Automation</li></ul></div>
-
-<div class="card"><h3>SQL</h3>
-<ul><li>SELECT</li><li>JOIN</li><li>GROUP BY</li></ul></div>
-
-<div class="card"><h3>Python</h3>
-<ul><li>Pandas</li><li>Cleaning</li><li>Automation</li></ul></div>
-
-<div class="card"><h3>Power BI</h3>
-<ul><li>DAX</li><li>Modeling</li><li>Dashboards</li></ul></div>
-
+<div class="card"><h3>Advanced Excel</h3><ul><li>Formulas</li><li>Pivots</li><li>Dashboards</li></ul></div>
+<div class="card"><h3>Google Sheets</h3><ul><li>QUERY</li><li>IMPORTRANGE</li><li>Automation</li></ul></div>
+<div class="card"><h3>SQL</h3><ul><li>SELECT</li><li>JOIN</li><li>GROUP BY</li></ul></div>
+<div class="card"><h3>Python</h3><ul><li>Pandas</li><li>Cleaning</li><li>Automation</li></ul></div>
+<div class="card"><h3>Power BI</h3><ul><li>DAX</li><li>Modeling</li><li>Dashboards</li></ul></div>
 </div>
 </section>
-
-<!-- JOB TYPES -->
 
 <section>
 <h2>Job Types After MIS</h2>
 <div class="grid">
-<div class="card"><h3>MIS Roles</h3>
-<ul><li>MIS Executive</li><li>MIS Analyst</li></ul></div>
-
-<div class="card"><h3>Analytics</h3>
-<ul><li>Data Analyst</li><li>Reporting Analyst</li></ul></div>
-
-<div class="card"><h3>BI</h3>
-<ul><li>Power BI Dev</li><li>Dashboard Analyst</li></ul></div>
+<div class="card">MIS Executive</div>
+<div class="card">MIS Analyst</div>
+<div class="card">Data Analyst</div>
+<div class="card">Reporting Analyst</div>
+<div class="card">Power BI Developer</div>
+<div class="card">Dashboard Analyst</div>
 </div>
 </section>
-
-<!-- COMPANIES -->
 
 <section class="section-alt">
 <h2>Hiring Company Categories</h2>
@@ -278,28 +248,57 @@ Practical MIS training focused on dashboards, automation, reporting, and analyti
 </div>
 </section>
 
-<!-- CAREER PATH -->
+<!-- TESTIMONIALS -->
 
 <section>
-<h2>Career Path</h2>
-<div class="highlight">
-MIS → Senior MIS → Data Analyst → Business Analyst → Power BI Dev → Data Scientist
-</div>
-</section>
+<h2>Student Success Testimonials</h2>
 
-<!-- NEXT -->
-
-<section class="section-alt">
-<h2>What Next After MIS</h2>
 <div class="grid">
-<div class="card">Advanced SQL</div>
-<div class="card">Advanced Python</div>
-<div class="card">Data Science</div>
-<div class="card">Machine Learning</div>
+
+<div class="card testimonial">
+<h3>Swathi — Associate</h3>
+<p>“I was working as an associate with only basic Excel knowledge. After this MIS training, I learned dashboards and reporting.”</p>
+<strong>Got placed as MIS Analyst with a strong salary hike.</strong>
+</div>
+
+<div class="card testimonial">
+<h3>Vishnu — Executive</h3>
+<p>“This course helped me move from manual reporting to automated MIS dashboards and Power BI reports.”</p>
+<strong>Cracked a reporting executive role with better package.</strong>
+</div>
+
+<div class="card testimonial">
+<h3>Varshini — Fresher</h3>
+<p>“As a fresher I had no analytics background, but the practical training made concepts very easy.”</p>
+<strong>Landed first MIS job with good starting package.</strong>
+</div>
+
+<div class="card testimonial">
+<h3>Surya — Call Center Experience</h3>
+<p>“I shifted my career from call center operations into MIS reporting using Excel and SQL skills.”</p>
+<strong>Moved to MIS role with major salary growth.</strong>
+</div>
+
+<div class="card testimonial">
+<h3>Krishna — Fresher</h3>
+<p>“Real project practice and interview preparation gave me confidence to attend analytics interviews.”</p>
+<strong>Selected as junior data analyst with solid pay.</strong>
+</div>
+
+<div class="card testimonial">
+<h3>Mohan — Hotel Chain Manager</h3>
+<p>“I used my operations experience and added MIS + Power BI skills from this course.”</p>
+<strong>Transitioned into corporate MIS reporting role.</strong>
+</div>
+
+<div class="card testimonial">
+<h3>Karthik — 1 Year Gap</h3>
+<p>“After a career gap, this MIS program helped me restart with updated technical skills.”</p>
+<strong>Secured job again with a competitive package.</strong>
+</div>
+
 </div>
 </section>
-
-<!-- CTA -->
 
 <section class="cta">
 <h2>Start Your MIS Career Today</h2>
@@ -309,8 +308,6 @@ Enroll by Email
 </a>
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 © 2026 MIS Executive Course<br><br>
 Designed & Developed by
@@ -319,3 +316,4 @@ Designed & Developed by
 
 </body>
 </html>
+	
