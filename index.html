@@ -1,140 +1,188 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>MIS Executive Master Course</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
-* {box-sizing: border-box;}
-html {scroll-behavior: smooth;}
-
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    background: linear-gradient(180deg,#eef3ff,#ffffff);
-    color: #222;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background:#f4f6ff;
+  color:#222;
 }
 
-/* HEADER */
+/* TOP BAR */
 
-header {
-    background: linear-gradient(120deg,#1f3c88,#39a2db,#7c4dff);
-    color: white;
-    padding: 70px 20px;
-    text-align: center;
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:#1f3c88;
+  color:white;
+  padding:10px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.topbar h3{
+  margin:0;
+  font-size:16px;
 }
 
-header p {
-    font-size: 18px;
-    opacity: .95;
+.topbar a{
+  background:#ff9800;
+  color:white;
+  padding:8px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
 }
 
-/* BUTTONS */
+/* HERO */
 
-.btn {
-    background: #ff9800;
-    border: none;
-    padding: 14px 26px;
-    color: white;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin: 8px;
-    transition: .3s;
+.hero{
+  background:linear-gradient(135deg,#1f3c88,#39a2db,#7c4dff);
+  color:white;
+  padding:60px 16px;
+  text-align:center;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+.hero h1{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:16px;
+  opacity:.95;
+}
+
+/* BUTTON */
+
+.btn{
+  display:inline-block;
+  background:#ff9800;
+  color:white;
+  padding:14px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  margin-top:16px;
+  font-weight:600;
 }
 
 /* SECTIONS */
 
-section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
+section{
+  padding:40px 16px;
+  max-width:1100px;
+  margin:auto;
 }
 
-.section-alt {
-    background: linear-gradient(180deg,#f7f9ff,#eef3ff);
+.section-alt{
+  background:#eef1ff;
+  border-radius:18px;
+  margin:20px auto;
 }
 
-h2 {
-    text-align: center;
-    color: #1f3c88;
-    margin-bottom: 30px;
-    font-size: 30px;
+h2{
+  text-align:center;
+  color:#1f3c88;
+  font-size:22px;
+  margin-bottom:24px;
 }
 
-/* CARDS */
+/* GRID — MOBILE FIRST */
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-    gap: 22px;
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
 }
 
-.card {
-    background: white;
-    padding: 24px;
-    border-radius: 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: .3s;
-    border-top: 6px solid #39a2db;
+/* CARD */
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  border-top:6px solid #39a2db;
+  transition:.3s;
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+.card:hover{
+  transform:translateY(-4px);
 }
 
-.card h3 {
-    color: #1f3c88;
+.card h3{
+  margin-top:0;
+  color:#1f3c88;
+  font-size:18px;
 }
 
-ul { line-height: 1.9; padding-left: 18px; }
+ul{
+  padding-left:18px;
+  line-height:1.8;
+  font-size:14px;
+}
 
-/* HIGHLIGHT BOX */
+/* HIGHLIGHT */
 
-.highlight {
-    background: linear-gradient(120deg,#e3f2fd,#ede7f6);
-    padding: 24px;
-    border-radius: 12px;
-    font-size: 18px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+.highlight{
+  background:linear-gradient(120deg,#e3f2fd,#ede7f6);
+  padding:20px;
+  border-radius:16px;
+  font-size:15px;
+  line-height:1.8;
 }
 
 /* CTA */
 
-.cta {
-    background: linear-gradient(120deg,#1f3c88,#7c4dff);
-    color: white;
-    text-align: center;
-    border-radius: 16px;
+.cta{
+  background:linear-gradient(120deg,#1f3c88,#7c4dff);
+  color:white;
+  text-align:center;
+  border-radius:20px;
 }
 
 /* FOOTER */
 
-footer {
-    background: #111;
-    color: #bbb;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 14px;
+footer{
+  background:#111;
+  color:#bbb;
+  text-align:center;
+  padding:30px 16px;
+  font-size:13px;
 }
 
-footer a {
-    color: #39a2db;
-    text-decoration: none;
-    font-weight: bold;
+footer a{
+  color:#39a2db;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* TABLET */
+
+@media (min-width:600px){
+  .hero h1{font-size:34px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* LAPTOP */
+
+@media (min-width:900px){
+  .hero h1{font-size:42px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+  h2{font-size:28px}
+  ul{font-size:15px}
 }
 
 </style>
@@ -142,30 +190,37 @@ footer a {
 
 <body>
 
-<header>
-<h1>MIS Executive Master Course</h1>
-<p>Advanced Excel • Google Sheets • SQL • Python • Power BI</p>
-<p>Become Job-Ready Data Professional in 40–60 Days</p>
+<!-- TOP BAR -->
 
-<button class="btn"
-onclick="window.location.href='mailto:narayana@knrtech.in?subject=MIS Course Enquiry'">
-Contact & Enroll Now
-</button>
-</header>
+<div class="topbar">
+<h3>MIS Executive Course</h3>
+<a href="mailto:narayana@knrtech.in?subject=MIS Course Enquiry">Contact</a>
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+<h1>MIS Executive Master Course</h1>
+<p>Excel • Google Sheets • SQL • Python • Power BI</p>
+<p>Job Ready in 40–60 Days</p>
+
+<a class="btn"
+href="mailto:narayana@knrtech.in?subject=MIS Course Demo Request">
+Book Demo Class
+</a>
+</div>
 
 <!-- ABOUT -->
 
 <section>
-<h2>About MIS Executive Course</h2>
-
+<h2>About Course</h2>
 <div class="highlight">
-Practical MIS training focused on dashboards, automation, reporting, and business analytics using real company datasets. Designed for job readiness.
+Practical MIS training focused on dashboards, automation, reporting, and analytics using real business datasets.
 <br><br>
-✔ 100% Practical Training  
+✔ Practical Training  
 ✔ Live Projects  
-✔ Interview Support  
-✔ Resume Guidance  
-✔ Placement Direction
+✔ Resume Support  
+✔ Interview Preparation
 </div>
 </section>
 
@@ -173,176 +228,74 @@ Practical MIS training focused on dashboards, automation, reporting, and busines
 
 <section class="section-alt">
 <h2>Course Modules</h2>
-
 <div class="grid">
 
-<div class="card">
-<h3>Advanced Excel</h3>
-<ul>
-<li>Advanced Formulas</li>
-<li>Pivot Dashboards</li>
-<li>Power Query</li>
-<li>Automation</li>
-<li>MIS Reports</li>
-</ul>
-</div>
+<div class="card"><h3>Advanced Excel</h3>
+<ul><li>Formulas</li><li>Pivots</li><li>Dashboards</li><li>Power Query</li></ul></div>
 
-<div class="card">
-<h3>Google Sheets</h3>
-<ul>
-<li>QUERY Functions</li>
-<li>IMPORTRANGE</li>
-<li>Live Dashboards</li>
-<li>Shared Reporting</li>
-</ul>
-</div>
+<div class="card"><h3>Google Sheets</h3>
+<ul><li>QUERY</li><li>IMPORTRANGE</li><li>Automation</li></ul></div>
 
-<div class="card">
-<h3>SQL Basics</h3>
-<ul>
-<li>SELECT / WHERE</li>
-<li>JOINs</li>
-<li>GROUP BY</li>
-<li>Reporting Queries</li>
-</ul>
-</div>
+<div class="card"><h3>SQL</h3>
+<ul><li>SELECT</li><li>JOIN</li><li>GROUP BY</li></ul></div>
 
-<div class="card">
-<h3>Python Basics</h3>
-<ul>
-<li>Pandas</li>
-<li>Excel Automation</li>
-<li>Data Cleaning</li>
-<li>Scripts</li>
-</ul>
-</div>
+<div class="card"><h3>Python</h3>
+<ul><li>Pandas</li><li>Cleaning</li><li>Automation</li></ul></div>
 
-<div class="card">
-<h3>Power BI</h3>
-<ul>
-<li>Data Modeling</li>
-<li>DAX Basics</li>
-<li>KPI Dashboards</li>
-<li>Interactive Reports</li>
-</ul>
-</div>
+<div class="card"><h3>Power BI</h3>
+<ul><li>DAX</li><li>Modeling</li><li>Dashboards</li></ul></div>
 
-</div>
-</section>
-
-<!-- PROJECTS -->
-
-<section>
-<h2>Projects You Will Build</h2>
-
-<div class="grid">
-<div class="card">Sales MIS Dashboard</div>
-<div class="card">Dealer Performance Tracker</div>
-<div class="card">HR Analytics Report</div>
-<div class="card">Automated Excel MIS</div>
-<div class="card">Power BI Executive Dashboard</div>
 </div>
 </section>
 
 <!-- JOB TYPES -->
 
-<section class="section-alt">
-<h2>Job Types After MIS Course</h2>
-
+<section>
+<h2>Job Types After MIS</h2>
 <div class="grid">
+<div class="card"><h3>MIS Roles</h3>
+<ul><li>MIS Executive</li><li>MIS Analyst</li></ul></div>
 
-<div class="card">
-<h3>MIS Roles</h3>
-<ul>
-<li>MIS Executive</li>
-<li>MIS Analyst</li>
-<li>Reporting Executive</li>
-<li>MIS Coordinator</li>
-</ul>
-</div>
+<div class="card"><h3>Analytics</h3>
+<ul><li>Data Analyst</li><li>Reporting Analyst</li></ul></div>
 
-<div class="card">
-<h3>Analytics Roles</h3>
-<ul>
-<li>Data Analyst</li>
-<li>Operations Analyst</li>
-<li>Business Analyst</li>
-<li>Reporting Analyst</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>BI Roles</h3>
-<ul>
-<li>Power BI Developer</li>
-<li>Dashboard Developer</li>
-<li>Excel Automation Analyst</li>
-</ul>
-</div>
-
+<div class="card"><h3>BI</h3>
+<ul><li>Power BI Dev</li><li>Dashboard Analyst</li></ul></div>
 </div>
 </section>
 
-<!-- COMPANY TYPES -->
+<!-- COMPANIES -->
 
-<section>
-<h2>Companies Hiring MIS Professionals</h2>
-
+<section class="section-alt">
+<h2>Hiring Company Categories</h2>
 <div class="grid">
-
-<div class="card">
-<h3>Corporate</h3>
-<ul>
-<li>IT & MNCs</li>
-<li>Consulting Firms</li>
-<li>Shared Service Centers</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Industries</h3>
-<ul>
-<li>Banking & Finance</li>
-<li>Telecom</li>
-<li>E-Commerce</li>
-<li>Automobile</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Operations Sectors</h3>
-<ul>
-<li>Retail Chains</li>
-<li>Logistics</li>
-<li>Healthcare</li>
-<li>Hospitality</li>
-</ul>
-</div>
-
+<div class="card">IT & MNC Companies</div>
+<div class="card">Banking & Finance</div>
+<div class="card">E-Commerce</div>
+<div class="card">Telecom</div>
+<div class="card">Retail & Logistics</div>
+<div class="card">Healthcare</div>
 </div>
 </section>
 
 <!-- CAREER PATH -->
 
-<section class="section-alt">
-<h2>Career Path After MIS</h2>
-
+<section>
+<h2>Career Path</h2>
 <div class="highlight">
-MIS Executive → Senior MIS Analyst → Data Analyst → Business Analyst → Power BI Developer → Data Scientist
+MIS → Senior MIS → Data Analyst → Business Analyst → Power BI Dev → Data Scientist
 </div>
 </section>
 
-<!-- NEXT AFTER MIS -->
+<!-- NEXT -->
 
-<section>
-<h2>What Next After MIS?</h2>
-
+<section class="section-alt">
+<h2>What Next After MIS</h2>
 <div class="grid">
 <div class="card">Advanced SQL</div>
 <div class="card">Advanced Python</div>
-<div class="card">Power BI Advanced DAX</div>
-<div class="card">Data Science Track</div>
-<div class="card">Machine Learning Basics</div>
+<div class="card">Data Science</div>
+<div class="card">Machine Learning</div>
 </div>
 </section>
 
@@ -350,24 +303,18 @@ MIS Executive → Senior MIS Analyst → Data Analyst → Business Analyst → P
 
 <section class="cta">
 <h2>Start Your MIS Career Today</h2>
-<p>Book Demo Class or Get Full Syllabus</p>
-
-<button class="btn"
-onclick="window.location.href='mailto:narayana@knrtech.in?subject=MIS Demo Class Request'">
-Email for Demo Class
-</button>
+<a class="btn"
+href="mailto:narayana@knrtech.in?subject=MIS Enrollment">
+Enroll by Email
+</a>
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-© 2026 MIS Executive Course | All Rights Reserved<br><br>
-
-Designed & Developed by 
-<a href="https://knrtech.in" target="_blank">
-KNR Tech Solutions
-</a>
-
+© 2026 MIS Executive Course<br><br>
+Designed & Developed by
+<a href="https://knrtech.in" target="_blank">KNR Tech Solutions</a>
 </footer>
 
 </body>
